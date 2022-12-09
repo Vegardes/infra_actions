@@ -57,6 +57,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull vegardes/api_yamdb
+            sudo docker pull vegardes/infra_actions
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 vegardes/api_yamdb
+            sudo docker run --rm -d -p 5000:5000 vegardes/infra_actions
